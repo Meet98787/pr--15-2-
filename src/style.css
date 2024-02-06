@@ -1,0 +1,6 @@
+.main-banner {
+    background-image: url("/src/Components/images/banner-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
