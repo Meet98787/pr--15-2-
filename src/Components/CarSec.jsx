@@ -10,7 +10,7 @@ function CarSec() {
     return (
         <>
 
-            <div className="car-sec" id='carlist'>
+            <div className="car-sec">
                 <div className="container py-3">
                     <div className="car text-center ">
                         <button className='btn btn-info  text-white fw-bold rounded-pill px-4  fs-5'>New Car</button>

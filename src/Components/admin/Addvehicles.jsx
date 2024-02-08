@@ -96,6 +96,8 @@ const Addvehicles = () => {
                 <input type="number"  class="form-control mb-2" name="year"  value={input ? input.year : ""} onChange={handleChange} />
                 <label>Seating Capacity</label>
                 <input type="number"  class="form-control mb-2" name="capacity"  value={input ? input.capacity : ""} onChange={handleChange} />
+                <label>Image Url</label>
+                <input type="text"  class="form-control mb-2" name="url"  value={input ? input.url : ""} onChange={handleChange} />
                 <select className="form-select mb-3" id="Specialization" name="brand" onChange={handleChange}>
                     <option value="">Select Brand</option>
                     {brand && brand.map((item, index) => (

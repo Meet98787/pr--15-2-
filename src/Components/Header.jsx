@@ -66,7 +66,7 @@ function Header({ logIn, setLogIn }) {
                                 <a className="nav-link  text-white fs-5" href="#">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link  text-white fs-5" href="#carlist">CarListing</a>
+                                <Link to="/carlist" className="nav-link  text-white fs-5" >CarListing</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link  text-white fs-5" href="#">FAQs</a>

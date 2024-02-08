@@ -9,7 +9,6 @@ import Contact from './Contact'
 function Home() {
     return (
         <>
-            <Header />
             <About />
             <CarSec />
             <ViewCar />
