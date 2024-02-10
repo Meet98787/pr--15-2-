@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { database } from '../../Firebase/Firebase';
-import { onValue, ref } from 'firebase/database';
+import { onValue, ref, update } from 'firebase/database';
 
 const Contectlist = () => {
     const [user,setUser] = useState()
@@ -20,7 +20,10 @@ const Contectlist = () => {
             }
         });
     };
-
+    const handleRead = async (id) => {
+        await update(ref(database, `contectus/${id}`), { status: "Readed" });
+        userlist();
+    }
   return (
     <table className="table table-hover">
                 <thead>
@@ -41,10 +44,14 @@ const Contectlist = () => {
                             <td>{item.email}</td>
                             <td>{item.contactno}$</td>
                             <td>{item.message}</td>
-
                             <td>
-                                <button className="btn btn-danger mx-2" >Mark As read</button>
+                            {item.status === "Pending" ? (
+                                <button className="btn btn-danger mx-2" onClick={()=>handleRead(item.id)}>Mark As Read</button>
+                                ) : (
+                                <button className="btn btn-danger mx-2">Readed</button>
+                            )}
                             </td>
+                            
                         </tr>
                     ))}
                 </tbody>

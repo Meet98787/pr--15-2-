@@ -28,13 +28,14 @@ function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        try {
+            const updatedInput = { ...input, "status": "Pending" };
+            await push(ref(database, "contectus"), updatedInput);
+            setInput();
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
 
-            try {
-                await push(ref(database, "contectus"), input);
-                setInput();
-            } catch (e) {
-                console.error("Error adding document: ", e);
-            }
     };
     return (
         <>

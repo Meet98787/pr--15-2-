@@ -15,6 +15,9 @@ import Carbook from './Components/Carbook'
 import Booking from './Components/admin/Booking'
 import Menagecontect from './Components/admin/Menagecontect'
 import Contectlist from './Components/admin/Contectlist'
+import Addtestimonial from './Components/Addtestimonial'
+import Showtestimonial from './Components/Showtestimonial'
+import ChangePassword from './Components/ChangePassword'
 
 
 
@@ -55,6 +58,9 @@ function App() {
           <Route path='/booking' element={<Booking/>} />
           <Route path='/menagecontect' element={<Menagecontect/>} />
           <Route path='/contectlist' element={<Contectlist/>} />
+          <Route path='/testimonial' element={<Addtestimonial/>} />
+          <Route path='/showtestimonial' element={<Showtestimonial/>} />
+          <Route path='/changepassword' element={<ChangePassword/>} />
         </Routes>
       </BrowserRouter>
     </>
